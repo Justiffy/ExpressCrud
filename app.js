@@ -6,8 +6,7 @@ const product = require('./routes/product.route');
 // Imports routes for the products
 const app = express();
 
-const dbUrl = 'mongodb://listar:375477787aA@ds113871.mlab.com:13871/listardb';
-const mongoDB = dbUrl;
+const mongoDB = 'mongodb://listar:375477787aA@ds113871.mlab.com:13871/listardb';
 
 mongoose.connect(mongoDB, (err) => {
   if (err) throw err;
