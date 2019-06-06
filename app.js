@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+
+const login = require('./routes/login.route');
 const product = require('./routes/product.route');
 
 // Imports routes for the products
@@ -16,6 +18,7 @@ mongoose.connect(mongoDB, (err) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/products', product);
+app.use(login);
 
 const port = 3000;
 
